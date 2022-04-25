@@ -692,7 +692,7 @@ We can use them as placeholders whenever we plan to implement a piece
 of functionality at a later time. In addition, their types and the types
 and quantities of all other variables in scope can be inspected
 at the REPL (or in your editor, if you setup the necessary plugin).
-Let's see them holes in action.
+Let's see them in action.
 
 Remember the `traverseList` example from an Exercise earlier in
 this section? If this was your first encounter with applicative list
