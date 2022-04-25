@@ -128,7 +128,7 @@ is significant again: We need to properly align the three
 variable names. Go ahead, and try out what happens if
 you remove a space in front of `mean` or `variance`.
 Note also, that the alignment of assignment operators
-`:=` is optional. I do this, since I thinks it helps
+`:=` is optional. I do this, since I think it helps
 readability.
 
 Let's also quickly look at the different variables
