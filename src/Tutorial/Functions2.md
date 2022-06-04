@@ -617,9 +617,9 @@ It is often desirable, to only write as little code as necessary
 and let Idris figure out the rest.
 We have already learned about one such occasion: Catch-all patterns.
 If a variable in a pattern match is not used on the right hand side,
-we can't just drop it, as this would make it impossible for
-Idris, which of several arguments we were planning to drop,
-but we can use an underscore as a placeholder instead:
+sometimes we can't just drop it, since Idris expects every function 
+definition rule to take the same number of input arguments. In this 
+case, we can use an underscore as a placeholder:
 
 ```idris
 isRight : Either a b -> Bool
