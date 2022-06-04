@@ -796,7 +796,7 @@ Tutorial.Functions2> :t impl_1
 impl_1 : Either e (List b)
 ```
 
-Since `x` is of type `a`, we can either us it as an argument
+Since `x` is of type `a`, we can either use it as an argument
 to `fun` or drop and ignore it. `xs`, on the other hand, is
 the remainder of the list of type `List a`. We could again
 drop it or process it further by invoking `traverseEither`
