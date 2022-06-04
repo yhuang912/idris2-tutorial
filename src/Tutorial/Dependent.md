@@ -85,7 +85,7 @@ ex3 = [12]
 
 So, we found a way to encode the *length* of a list-like data structure in
 its *type*, and it is a *type error* if the number of elements in
-a vector does not agree with then length given in its type. We will
+a vector does not agree with the length given in its type. We will
 shortly see several use cases, where this additional piece of information
 allows us to be more precise in the types and rule out additional
 programming mistakes. But first, we need to quickly clarify some
