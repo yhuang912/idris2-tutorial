@@ -628,7 +628,7 @@ As you can see, if we load this module in a REPL session and
 inspect the type of `(>>=)`, we get two results as two
 operators with this name are in scope. If we only want
 the REPL to print the type of our custom *bind* operator,
-is is sufficient to prefix it with `IO`, although we could
+it is sufficient to prefix it with `IO`, although we could
 also prefix it with its full namespace:
 
 ```repl
