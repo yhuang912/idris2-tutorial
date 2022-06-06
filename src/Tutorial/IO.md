@@ -444,7 +444,7 @@ Main> :t (>>=) {m = IO}
 >>= : IO a -> (a -> IO b) -> IO b
 ```
 
-This describes a sequence of `IO` actions. Upon execution,
+This describes a sequencing of `IO` actions. Upon execution,
 the first `IO` action is being run and its result is
 being passed as an argument to the function generating
 the second `IO` action, which is then also being executed.
