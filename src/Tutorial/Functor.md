@@ -916,7 +916,7 @@ laws. Here they are:
   function has no visible effect.
 
 * `[| f . g |] <*> v = f <*> (g <*> v)`:
-  I must not matter, whether we compose our functions
+  It should not matter, whether we compose our functions
   first and then apply them, or whether we apply
   our functions first and then compose them.
 
