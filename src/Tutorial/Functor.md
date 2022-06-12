@@ -1232,7 +1232,7 @@ must behave the same as the implementation in terms of `(>>=)`:
 ### Exercises part 3
 
 1. `Applicative` extends `Functor`, because every `Applicative`
-   is also a `Functor`. Proof this by implementing `map` in
+   is also a `Functor`. Prove this by implementing `map` in
    terms of `pure` and `(<*>)`.
 
 2. `Monad` extends `Applicative`, because every `Monad` is
