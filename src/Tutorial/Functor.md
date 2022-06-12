@@ -1251,7 +1251,7 @@ must behave the same as the implementation in terms of `(>>=)`:
    CRUD operations on a data store. We will use a mutable
    reference (imported from `Data.IORef` from the *base* library)
    holding a list of `User`s paired with a unique ID
-   of type `Nat` as our user data base:
+   of type `Nat` as our user database:
 
    ```idris
    DB : Type
