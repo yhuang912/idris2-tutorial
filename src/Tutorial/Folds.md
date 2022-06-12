@@ -68,7 +68,7 @@ replicateVect (S k) x = x :: replicateVect k x
 ```
 
 While we often use recursion to *create* values of data types like
-`List` or `Vect`, we also use recursion, when we *consume* such values.
+`List` or `Vect`, we also use recursion when we *consume* such values.
 For instance, here is a function for calculating the length of a list:
 
 ```idris
