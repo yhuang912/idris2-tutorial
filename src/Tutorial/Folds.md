@@ -295,7 +295,7 @@ As you can see, function `even` is allowed to call function `odd` in
 its implementation, since `odd` has already been declared (but not yet
 implemented).
 
-If you're like me and want to keep declarations and implementations
+If you'd like to keep declarations and implementations
 next to each other, you can introduce a `mutual` block, which has
 the same effect. Like with other code blocks, functions in a `mutual`
 block must all be indented by the same amount of whitespace:
