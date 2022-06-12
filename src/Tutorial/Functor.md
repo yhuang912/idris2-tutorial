@@ -1158,9 +1158,8 @@ decodeCRUD l s =
 
 I added two utility function for helping with type inference
 and to get slightly nicer syntax. The important thing to note
-is, how we pattern match on the result of the first
-parsing function to decide on the data constructor
-and thus the next parsing function to use.
+is, how we pattern match on the result of `reafField` to decide 
+which `Crud` data constructor to use.
 
 Here's how this works at the REPL:
 
@@ -1236,7 +1235,7 @@ must behave the same as the implementation in terms of `(>>=)`:
    terms of `pure` and `(<*>)`.
 
 2. `Monad` extends `Applicative`, because every `Monad` is
-   also an `Applicative`. Proof this by implementing
+   also an `Applicative`. Prove this by implementing
    `(<*>)` in terms of `(>>=)` and `pure`.
 
 3. Implement `(>>=)` in terms of `join` and other functions
