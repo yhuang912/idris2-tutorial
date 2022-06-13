@@ -534,7 +534,7 @@ other programming languages).
 
 Below - as a demonstration - is a simple proof of `Void`.
 `Void` is an *uninhabited type*: a type with no values.
-*Proofing `Void`* means, that we implement a function accepted
+*Proving `Void`* means, that we implement a function accepted
 by the totality checker, which returns a value of type `Void`,
 although this is supposed to be impossible as there is no
 such value. Doing so allows us to completely
