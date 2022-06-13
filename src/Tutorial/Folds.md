@@ -542,7 +542,7 @@ disable the type system together with all the guarantees it provides.
 Here's the code and its dire consequences:
 
 ```idris
--- In order to proof `Void`, we just loop forever, using
+-- In order to prove `Void`, we just loop forever, using
 -- `assert_smaller` to silence the totality checker.
 proofOfVoid : Bits8 -> Void
 proofOfVoid n = proofOfVoid (assert_smaller n n)
