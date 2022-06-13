@@ -247,13 +247,13 @@ type, nor is it allowed to change the order of elements.
 ### Exercises part 1
 
 1. It is interesting that `Traversable` has a `Functor`
-   constraint. Proof that every `Traversable` is
+   constraint. Prove that every `Traversable` is
    automatically a `Functor` by implementing `map`
    in terms of `traverse`.
 
    Hint: Remember `Control.Monad.Identity`.
 
-2. Likewise, proof that every `Traversable` is
+2. Likewise, prove that every `Traversable` is
    a `Foldable` by implementing `foldMap` in
    terms of `Traverse`.
 
@@ -302,7 +302,7 @@ type, nor is it allowed to change the order of elements.
    ```
 
 8. Like `Functor`, `Applicative` and `Foldable`, `Traversable` is closed under
-   composition. Proof this by implementing `Traversable` for `Comp`
+   composition. Prove this by implementing `Traversable` for `Comp`
    and `Product`:
 
    ```idris
