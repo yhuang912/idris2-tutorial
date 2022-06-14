@@ -352,7 +352,7 @@ in a `for`- or `while`-loop.
 
 In Idris, there is no such thing as mutable state.
 Or is there? Remember, how we used a mutable reference
-to simulate a data base connection in an earlier
+to simulate a database connection in an earlier
 exercise. There, we actually used some truly mutable
 state. However, since accessing or modifying a mutable
 variable is not a referential transparent operation,
