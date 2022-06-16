@@ -55,8 +55,7 @@ type `Maybe (Vect (3 + n) Nat)`. It is therefore
 safe to use this in a call to `drop 3`. Note, how all of this
 is known at compile time: We encoded the prerequisite
 that the first argument is a vector of at least three elements
-in the length index and could derive the length
-of the result from this.
+more than the length of the `Vect` in the `Maybe` result.
 
 ### Vectors of Unknown Length
 
