@@ -658,7 +658,7 @@ when a function requires additional arguments, on which you
 can pattern match, and what other utility functions might be
 necessary.
 
-1. Proof that the three encodings for nucleobases are *isomorphic*
+1. Prove that the three encodings for nucleobases are *isomorphic*
    (meaning: of the same structure) by writing lossless conversion
    functions from `Acid1` to `Acid2` and back. Likewise
    for `Acid1` and `Acid3`.
