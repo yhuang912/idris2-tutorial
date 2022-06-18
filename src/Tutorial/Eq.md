@@ -367,7 +367,7 @@ meaning, that there is no value of this type.
 
 We will see several different use cases for compile time proofs, a
 very straight forward one being to show that our functions behave
-as they should by proofing some properties about them. For instance,
+as they should by proving some properties about them. For instance,
 here is a proposition that `map` on list does not change the number of
 elements in the list:
 
