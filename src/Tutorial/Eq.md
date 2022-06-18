@@ -489,7 +489,7 @@ When writing down the types of proofs as we did above, one
 has to be very careful not to fall into the following trap:
 In general, Idris will treat lowercase identifiers in
 function types as type parameters (erased implicit arguments).
-For instance, here is a try at proofing the identity functor
+For instance, here is a try at proving the identity functor
 law for `Maybe`:
 
 ```idris
@@ -554,21 +554,21 @@ highlighted differently: `map` as a function name, `id` as a bound variable.
 
 ### Exercises part 2
 
-In these exercises, you are going to proof several simple properties
+In these exercises, you are going to prove several simple properties
 of small functions. When writing proofs, it is even more important
 to use holes to figure out what Idris expects from you next. Use
 the tools given to you, instead of trying to find your way in the
 dark!
 
-1. Proof that `map id` on an `Either e` returns the value unmodified.
+1. Prove that `map id` on an `Either e` returns the value unmodified.
 
-2. Proof that `map id` on a list returns the list unmodified.
+2. Prove that `map id` on a list returns the list unmodified.
 
-3. Proof that complementing a strand of a nucleobase
+3. Prove that complementing a strand of a nucleobase
    (see the [previous chapter](DPair.md#use-case-nucleic-acids))
    twice leads to the original strand.
 
-   Hint: Proof this for single bases first, and use `cong2`
+   Hint: Prove this for single bases first, and use `cong2`
    from the *Prelude* in your implementation for sequences
    of nucleic acids.
 
@@ -578,7 +578,7 @@ dark!
    replaceVect : (ix : Fin n) -> a -> Vect n a -> Vect n a
    ```
 
-   Now proof, that after replacing an element in a vector
+   Now prove, that after replacing an element in a vector
    using `replaceAt` accessing the same element using
    `index` will return the value we just added.
 
@@ -599,7 +599,7 @@ from `Data.Vect` as `replaceAt` and `insertAt`.
 Remember function `onePlusOneWrong` from above? This was definitely
 a wrong statement: One plus one does not equal three. Sometimes,
 we want to express exactly this: That a certain statement is false
-and does not hold. Consider for a moment what it means to proof
+and does not hold. Consider for a moment what it means to prove
 a statement in Idris: Such a statement (or proposition) is a
 type, and a proof of the statement is a value or expression of
 this type: The type is said to be *inhabited*.
@@ -626,7 +626,7 @@ implement this by pattern matching, and there is only
 one constructor to match on, which leads to an impossible
 case.
 
-We can also use contradictory statements to proof other such
+We can also use contradictory statements to prove other such
 statements. For instance, here is a proof that if the lengths
 of two lists are not the same, then the two list can't be
 the same either:
@@ -857,7 +857,7 @@ equality. We can implement this to figure out if two values are equal or not.
    1. Implement a function `ctNat`, which assigns every value
       of type `ColType` a unique natural number.
 
-   2. Proof that `ctNat` is injective.
+   2. Prove that `ctNat` is injective.
       Hint: You will need to pattern match on the `ColType`
       values, but four matches should be enough to satisfy the
       coverage checker.
@@ -915,7 +915,7 @@ In expression `n + 0`,  not all values are known (`n` is a variable),
 and `(+)` is implemented by pattern matching on the first
 argument, about which we know nothing here.
 
-However, we can teach Idris. If we can proof that the two
+However, we can teach Idris. If we can prove that the two
 expressions are equivalent, we can replace one expression
 for the other, so that the two unify again. Here is a lemma
 and its proof, that `n + 0` equals `n`, for all natural
@@ -1057,19 +1057,19 @@ the compiled Idris program.
 
 1. Implement `plusSuccRightSucc` yourself.
 
-2. Proof that `minus n n` equals zero for all natural numbers `n`.
+2. Prove that `minus n n` equals zero for all natural numbers `n`.
 
-3. Proof that `minus n 0` equals n for all natural numbers `n`
+3. Prove that `minus n 0` equals n for all natural numbers `n`
 
-4. Proof that `n * 1 = n` and `1 * n = n`
+4. Prove that `n * 1 = n` and `1 * n = n`
    for all natural numbers `n`.
 
-5. Proof that addition of natural numbers is
+5. Prove that addition of natural numbers is
    commutative.
 
 6. Implement a tail-recursive version of `map` for vectors.
 
-7. Proof the following proposition:
+7. Prove the following proposition:
 
    ```idris
    mapAppend :  (f : a -> b)
