@@ -477,7 +477,7 @@ that we did not make any stupid mistakes.
 
 The examples we saw so far were very easy to implement. In general,
 this is not the case, and we will have to learn about several
-additional techniques in order to proof interesting things about
+additional techniques in order to prove interesting things about
 our programs. However, when we use Idris as a general purpose
 programming language and not as a proof assistant, we are free
 to choose whether some aspect of our code needs such strong
