@@ -1,7 +1,7 @@
 # Predicates and Proof Search
 
 In the [last chapter](Eq.md) we learned about propositional
-equality, which allowed us to proof that two values are
+equality, which allowed us to prove that two values are
 equal. Equality is a relation between values, and we used
 an indexed data type to encode this relation by limiting
 the degrees of freedom of the indices in the sole data
