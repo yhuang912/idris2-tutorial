@@ -1,5 +1,8 @@
 # Functional Programming in Idris 2
 
+[中文翻译](https://github.com/running-grass/idris2-tutorial-zh/blob/main/translation/README.md),
+[日本語訳](https://github.com/gemmaro/idris2-tutorial/blob/ja/translation/ja/README.md)
+
 The goal of this project is quickly explained: To become a more
 or less comprehensive guide to the Idris programming language,
 with a lot of introductory material targeted at newcomers to
@@ -39,7 +42,7 @@ stuff will already be familiar to you.
    4. [The Shape of an Idris Definition](src/Tutorial/Intro.md#the-shape-of-an-idris-definition)
    5. [Where to get Help](src/Tutorial/Intro.md#where-to-get-help)
 2. [Functions Part 1](src/Tutorial/Functions1.md)
-   1. [Functions with more that one Argument](src/Tutorial/Functions1.md#functions-with-more-that-one-argument)
+   1. [Functions with more than one Argument](src/Tutorial/Functions1.md#functions-with-more-that-one-argument)
    2. [Function Composition](src/Tutorial/Functions1.md#function-composition)
    3. [Higher-order Functions](src/Tutorial/Functions1.md#higher-order-functions)
    4. [Currying](src/Tutorial/Functions1.md#currying)
@@ -108,12 +111,17 @@ hand. I plan to eventually have a concise reference on Idris
 syntax, typical error messages, the module system, interactive
 editing and possibly others.
 
-1. [Interactive Editing in Neovim](src/Appendices/Neovim.md)
+1. [Getting Started with pack and Idris2](src/Appendices/Install.md)
+2. [Interactive Editing in Neovim](src/Appendices/Neovim.md)
+3. [Structuring Idris Projects](src/Appendices/Projects.md)
+4. [A Deep Dive into Quantitative Type Theory](src/Appendices/QTT.md)
 
 ## Prerequisites
 
 At the moment, this project is being actively developed and
 evolved against the main branch of the Idris 2 repository.
 It is being tested nightly on GitHub and built against
-the latest commit of the Idris 2 main branch as well as the
-Idris 2 commit listed in file `.idris-version`.
+the latest version of [pack's package collection](https://github.com/stefan-hoeck/idris2-pack-db).
+
+In order to follow along with this tutorial, it is strongly suggested to install
+Idris via the pack package manager as described [here](src/Appendices/Install.md).

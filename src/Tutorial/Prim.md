@@ -1,7 +1,7 @@
 # Primitives
 
 In the topics we covered so far, we hardly ever talked about primitive
-types in Idris. They where around and we used them in some computations,
+types in Idris. They were around and we used them in some computations,
 but I never really explained how they work and where they come from,
 nor did I show in detail what we can and can't do with them.
 
@@ -140,7 +140,7 @@ For `Bits8`, these are:
 Note, that these functions do not return a `Bool` (which
 is *not* a primitive type in Idris), but an `Int`. They are
 therefore not as safe or convenient to use as the corresponding
-operator implementations form interfaces `Eq` and `Comp`.
+operator implementations from interfaces `Eq` and `Comp`.
 On the other hand, they do not go via a conversion to `Bool`
 and might therefore perform slightly better in performance
 critical code (which you can only identify after some
@@ -542,10 +542,9 @@ integer types (`Int8`, `Int16`, `Int32`, and `Int64`) come with
 implementations of all integral interfaces and
 the two interfaces for bitwise operations (`Bits` and `FiniteBits`).
 Overflows are handled by calculating the remainder
-modulo `2^bitsize` and adding the lower bound (a negative number)
-if the result is still out of range. For instance, for `Int8`, all operations
-calculate their results modulo 256, subtracting 128 if the
-result is still out of bounds:
+modulo `2^bitsize` and subtracting `2^bitsize` if the result is still out of
+range. For instance, for `Int8`, all operations calculate their results modulo
+256, subtracting 256 if the result is still out of bounds:
 
 ```repl
 Main> the Int8 2 * 127
@@ -803,7 +802,7 @@ fromString : (s : String) -> {auto 0 prf : isAsciiString s === True} -> Ascii
 fromString s = MkAscii s prf
 ```
 
-With this, we can us (valid) string literals for coming up with
+With this, we can use (valid) string literals for coming up with
 values of type `Ascii` directly:
 
 ```idris
@@ -1025,7 +1024,7 @@ utility functions:
 
 ```idris
 data IsYes0 : (d : Dec0 prop) -> Type where
-  ItIsYes0 : IsYes0 (Yes0 prf)
+  ItIsYes0 : {0 prf : _} -> IsYes0 (Yes0 prf)
 
 0 fromYes0 : (d : Dec0 prop) -> (0 prf : IsYes0 d) => prop
 fromYes0 (Yes0 x) = x
@@ -1188,7 +1187,7 @@ Between l u = GreaterThan l && LessThan u
    Likewise, implement `Decidable Nat (m <=)`, because we require
    both kinds of predicates.
 
-   Note: You should by know figure out yourself that `n` must be
+   Note: You should by now figure out yourself that `n` must be
    available at runtime and how to make sure that this is the case.
 
 7. Proof that `(<=)` is reflexive and transitive by declaring and
@@ -1407,5 +1406,5 @@ things perform well at runtime and compile time. I'm experimenting
 with a library, which deals with these issues. It is not yet finished,
 but you can have a look at it [here](https://github.com/stefan-hoeck/idris2-prim).
 
-<!-- vi: filetype=idris2
+<!-- vi: filetype=idris2:syntax=markdown
 -->

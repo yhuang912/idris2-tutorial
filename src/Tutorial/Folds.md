@@ -816,7 +816,7 @@ the first argument is `True` and the second is returned as the function's
 
 There are two utility functions for working with lazy evaluation:
 Function `delay` wraps a value in the `Lazy` data type. Note, that
-the argument of `lazy` is strict, so the following might take
+the argument of `delay` is strict, so the following might take
 several seconds to print its result:
 
 ```repl
@@ -972,7 +972,7 @@ it consists of six essential functions:
 * `foldr`, for folds from the right
 * `foldl`, for folds from the left
 * `null`, for testing if the container is empty or not
-* `foldM`, for effectful folds in a monad
+* `foldlM`, for effectful folds in a monad
 * `toList`, for converting the container to a list of values
 * `foldMap`, for folding over a monoid
 
@@ -1056,9 +1056,9 @@ functional programming in general. Wrapping one's head
 around recursion takes time and experience. Therefore - as
 usual - try to solve as many exercises as you can.
 
-In the next chapter, we are taking the concept of iterating
+In the [next chapter](./Traverse.md), we are taking the concept of iterating
 over container types one step further and look at
 effectful data traversals.
 
-<!-- vi: filetype=idris2
+<!-- vi: filetype=idris2:syntax=markdown
 -->

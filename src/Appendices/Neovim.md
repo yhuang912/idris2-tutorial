@@ -79,7 +79,7 @@ Before we begin, note that the commands and actions shown in this
 tutorial might not work correctly after you edited a source file
 but did not write your changes to disk. Therefore, the first thing
 you should try if the things described here do not work, is to
-quickly safe the current file (`:w`).
+quickly save the current file (`:w`).
 
 Let's start with negation of a boolean value:
 
@@ -323,7 +323,7 @@ out each of them from within this source file.
 * Typing `<LocalLeader><LocalLeader>e` will display the error message
   from the current line in a popup window. This can be highly useful,
   if error messages are too long to fit on a single line. Likewise,
-  `<LocalLeader>el` will list all error messages from the current
+  `<LocalLeader><LocalLeader>el` will list all error messages from the current
   buffer in a new window. You can then select an error message and
   jump to its origin by pressing `<Enter>`.
 
@@ -370,5 +370,5 @@ is available for some other editors, so feel free to ask what's
 available for your editor of choice, for instance on the
 [Idris 2 Discord channel](https://discord.gg/UX68fDs2jc).
 
-<!-- vi: filetype=idris2
+<!-- vi: filetype=idris2:syntax=markdown
 -->

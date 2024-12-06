@@ -48,7 +48,7 @@ record Table where
 concatTables1 : Table -> Table -> Maybe Table
 ```
 
-We will not be able to implement `concatTables` by appending the
+We will not be able to implement `concatTables1` by appending the
 two row vectors, unless we can somehow verify that the two schemata
 are identical. "Well," I hear you say, "that shouldn't be a big issue!
 Just implement `Eq` for `ColType`". Let's give this a try:
@@ -651,7 +651,7 @@ Actually, this is just a specialized version of the contraposition of
 
 ```idris
 contraCong : {0 f : _} -> Not (f a = f b) -> Not (a = b)
-contraCong fun = fun . cong f
+contraCong fun x = fun $ cong f x
 ```
 
 ### Interface `Uninhabited`
@@ -894,7 +894,7 @@ leftZero = (++)
 ```
 
 However, the example below can't be implemented as easily
-(try id!), because Idris can't figure out on its own
+(try it!), because Idris can't figure out on its own
 that the two lengths unify.
 
 ```idris
@@ -982,17 +982,17 @@ lists:
 
 
 ```repl
-reverseOnto' : Vect m a -> Vect n a -> Vect (m + n) a
-reverseOnto' xs []        = xs
-reverseOnto' xs (x :: ys) = reverseOnto' (x :: xs) ys
+revOnto' : Vect m a -> Vect n a -> Vect (m + n) a
+revOnto' xs []        = xs
+revOnto' xs (x :: ys) = revOnto' (x :: xs) ys
 
 
 reverseVect' : Vect n a -> Vect n a
-reverseVect' = reverseOnto' []
+reverseVect' = revOnto' []
 ```
 
 As you might have guessed, this will not compile as the
-length indices in the two clauses of `reverseOnto'` do
+length indices in the two clauses of `revOnto'` do
 not unify.
 
 The *nil* case is a case we've already seen above:
@@ -1000,8 +1000,8 @@ Here `n` is zero, because the second vector is empty,
 so we have to convince Idris once again that `m + 0 = m`:
 
 ```idris
-reverseOnto : Vect m a -> Vect n a -> Vect (m + n) a
-reverseOnto xs [] = rewrite addZeroRight m in xs
+revOnto : Vect m a -> Vect n a -> Vect (m + n) a
+revOnto xs [] = rewrite addZeroRight m in xs
 ```
 
 The second case is more complex. Here, Idris fails to unify
@@ -1022,7 +1022,7 @@ In our case, we want to replace `S (m + len)` with `m + S len`,
 so we will need the version with arguments flipped. However, there
 is one more obstacle: We need to invoke `plusSuccRightSucc`
 with the length of `ys`, which is not given as an implicit
-function argument of `reverseOnto`. We therefore need to pattern
+function argument of `revOnto`. We therefore need to pattern
 match on `n` (the length of the second vector), in order to
 bind the length of the tail to a variable. Remember, that we
 are allowed to pattern match on an erased argument only if
@@ -1031,8 +1031,8 @@ argument (`ys` in this case). Here's the implementation of the
 second case:
 
 ```idris
-reverseOnto {n = S len} xs (x :: ys) =
-  rewrite sym (plusSuccRightSucc m len) in reverseOnto (x :: xs) ys
+revOnto {n = S len} xs (x :: ys) =
+  rewrite sym (plusSuccRightSucc m len) in revOnto (x :: xs) ys
 ```
 
 I know from my own experience that this can be highly confusing
@@ -1094,5 +1094,7 @@ thus reducing the need to return a `Maybe` or other failure type:
 Due to the restricted input, our functions can no longer
 fail.
 
-<!-- vi: filetype=idris2
+[Next chapter](./Predicates.md)
+
+<!-- vi: filetype=idris2:syntax=markdown
 -->

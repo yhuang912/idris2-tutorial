@@ -423,7 +423,7 @@ replicate : (n : Nat) -> a -> Vect n a
 ```
 
 Now, `replicate` is a *dependent function type*: The output type
-*depends* on the value of one the arguments. It is straight forward
+*depends* on the value of one of the arguments. It is straight forward
 to implement `replicate` by pattern matching on `n`:
 
 ```idris
@@ -464,6 +464,7 @@ this, which constructor(s) of the type family to use.
 
    ```idris
    zipWith3 : (a -> b -> c -> d) -> Vect n a -> Vect n b -> Vect n c -> Vect n d
+   ```
 
 4. Declare and implement a function `foldSemi`
    for accumulating the values stored
@@ -813,7 +814,7 @@ and pass it as an explicit argument to `replicate`.
 
 Deciding whether to pass potentially inferable arguments to a function implicitly
 or explicitly is a question of how often the arguments actually *are* inferable
-by Idris. Sometimes it might even be useful to have both verions
+by Idris. Sometimes it might even be useful to have both versions
 of a function. Remember, however, that even in case of an implicit argument
 we can still pass the value explicitly:
 
@@ -905,5 +906,5 @@ library. Likewise, `Fin` is available from `Data.Fin` from *base*.
 In the [next section](IO.md), it is time to learn how to write effectful programs
 and how to do this while still staying *pure*.
 
-<!-- vi: filetype=idris2
+<!-- vi: filetype=idris2:syntax=markdown
 -->

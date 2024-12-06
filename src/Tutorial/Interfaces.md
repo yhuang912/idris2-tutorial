@@ -66,7 +66,7 @@ cmp : String -> String -> Ordering
 We'd also like to have similar functions for many other data types.
 Function overloading allows us to do just that, but `cmp` is not an
 isolated piece of functionality. From it, we can derive functions
-like `greaterThan'`, `lessThan'`, `minmum'`, `maximum'`, and many others:
+like `greaterThan'`, `lessThan'`, `minimum'`, `maximum'`, and many others:
 
 ```idris
 lessThan' : String -> String -> Bool
@@ -817,5 +817,5 @@ at functions and their types. We will learn about named arguments,
 implicit arguments, and erased arguments as well as some
 constructors for implementing more complex functions.
 
-<!-- vi: filetype=idris2
+<!-- vi: filetype=idris2:syntax=markdown
 -->

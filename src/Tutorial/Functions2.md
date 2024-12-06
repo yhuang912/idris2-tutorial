@@ -3,7 +3,7 @@
 So far, we learned about the core features of the Idris
 language, which it has in common with several other
 pure, strongly typed programming languages like Haskell:
-(Higher order) Functions, algebraic data types, pattern matching,
+(Higher-order) Functions, algebraic data types, pattern matching,
 parametric polymorphism (generic types and functions), and
 ad hoc polymorphism (interfaces and constrained functions).
 
@@ -120,7 +120,7 @@ Seems to work, so let's digest this step by step.
 We introduce several new local variables
 (`len`, `mean`, and `variance`),
 which all will be used more than once in the remainder
-of the implementation. To do so, we us a `let` binding. This
+of the implementation. To do so, we use a `let` binding. This
 consists of the `let` keyword, followed by one or more
 variable assignments, followed by the final expression,
 which has to be prefixed by `in`. Note, that whitespace
@@ -308,7 +308,7 @@ only from the surrounding scope and from other functions
 defined later in the same `where` block. These need to
 be explicitly typed and indented by the same amount of whitespace.
 
-Local definitions can also be introduce *before* a function's
+Local definitions can also be introduced *before* a function's
 implementation by using the `let` keyword. This usage
 of `let` is not to be confused with *let bindings* described
 above, which are used to bind and reuse the results of intermediate
@@ -348,7 +348,7 @@ is a specialized version of the more general `traverse`,
 one of the most powerful and versatile functions
 available in the *Prelude* (check out its type!).
 
-1. Module `Data.List` in *base* exports functions `find` and `elemBy`.
+1. Module `Data.List` in *base* exports functions `find` and `elem`.
    Inspect their types and use these in the implementation of
    `handleRequest`. This should allow you to completely get rid
    of the `where` block.
@@ -960,5 +960,5 @@ Idris' type signatures will be of paramount importance there. Whenever
 you feel lost, add one or more holes and inspect their context to decide what to
 do next.
 
-<!-- vi: filetype=idris2
+<!-- vi: filetype=idris2:syntax=markdown
 -->

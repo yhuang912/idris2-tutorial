@@ -1209,7 +1209,7 @@ Without further ado, here are the laws for `Monad`:
   These two laws state that `pure` should behave
   neutrally w.r.t. *bind*.
 
-* (m >>= f) >>= g = m >>= (f >=> g)
+* `(m >>= f) >>= g = m >>= (f >=> g)`.
   This is the law of associativity for monad.
   You might not have seen the second operator `(>=>)`.
   It can be used to sequence effectful computations
@@ -1365,7 +1365,7 @@ must behave the same as the implementation in terms of `(>>=)`:
 
       ```idris
       record Prog' env err a where
-        constructor MkProg
+        constructor MkProg'
         runProg' : env -> IO (Either err a)
       ```
 
@@ -1387,7 +1387,7 @@ introduction for programmers, written by
 
 The usefulness of applicative functors as a middle ground between
 functor and monad was discovered several years after monads had
-already been in use in Haskell. They where introduced in the
+already been in use in Haskell. They were introduced in the
 article [*Applicative Programming with Effects*](https://www.staff.city.ac.uk/~ross/papers/Applicative.html),
 which is freely available online and a highly recommended read.
 
@@ -1422,5 +1422,5 @@ In the [next chapter](Folds.md) we get to learn more about
 recursion, totality checking, and an interface for
 collapsing container types: `Foldable`.
 
-<!-- vi: filetype=idris2
+<!-- vi: filetype=idris2:syntax=markdown
 -->
